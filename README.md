@@ -5,7 +5,7 @@ Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra
 
 ## installation
 
-1. [Install Anaconda following these instructions](https://www.continuum.io/downloads)
+1. [Install Anaconda following these instructions](https://docs.anaconda.com/anaconda/install/)
 
 2. 
 
