@@ -1,8 +1,8 @@
 # GIR19 paper
 
-**Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources**
+Title: **Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources**
 
-Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra Hosseini, Daniel van Strien
+Authors: Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra Hosseini, Daniel van Strien
 
 
 ## installation
