@@ -61,6 +61,10 @@ mysql> exit;
 ```
 $ wget http://download.geonames.org/export/dump/cities500.zip
 $ wget http://download.geonames.org/export/dump/alternateNamesV2.zip
+$ unzip cities500.zip
+$ unzip alternateNamesV2.zip
+$ rm cities500.zip
+$ rm alternateNamesV2.zip
 ```
 
 **5. Create the `wikiGazetteer` database:**
