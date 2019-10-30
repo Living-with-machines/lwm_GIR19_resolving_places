@@ -6,13 +6,7 @@ This document explains how to generate WikiGazetteer, a gazetteer based on Wikip
 
 > Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra Hosseini, and Daniel van Strien, “Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources,” in Proceedings of the 13th Workshop on Geographic Information Retrieval, 2019 (GIR19).
 
-This is the step-by-step description on how to create the alpha version of the gazetteer from an English version of Wikipedia.
-
-To build a gazetteer in any other language (i.e. based on a different Wikipedia), you'll need to change:
-
-```CHAAAANGE!!!```
-
-Creating a gazetteer out of a smaller Wikipedia might be useful for testing purposes.
+This is the step-by-step description on how to create the alpha version of the gazetteer from an English version of Wikipedia. To build a gazetteer in any other language (i.e. based on a different Wikipedia), you'll need to change the language codes in a couple of places (step 2 and step 6). Creating a gazetteer from a smaller Wikipedia (a Wikipedia in a language for which there are less entries) might be useful for testing.
 
 ## Steps to create WikiGazetteer
 
@@ -100,7 +94,7 @@ mysql> ALTER TABLE `altname` ADD FOREIGN KEY (`main_id`) REFERENCES `location` (
 mysql> exit;
 ```
 
-**Populate the `wikiGazetteer` database:**
+**6. Populate the `wikiGazetteer` database:**
 ```
 $ python addLocations.py [language] [path_to_resources]
 $ python addRedirections.py 
@@ -110,7 +104,7 @@ _Notes:_
 * You will need to change your mysql connection credentials accordingly, both in `addLocations.py` (lines 182-183 and 188-189) and `addRedirections.py` (lines 69-70 and 75-76).
 * These scripts have been created for English. For any other language using the Latin alphabet, just adding the correct language code as first argument of `addLocations.py` should be enough. For languages not using the Latin alphabet, you might also want to change the regular expressions in `addLocations.py` (line 55) and `addRedirections.py` (line 17).
 
-**Add indices to `wikiGazetteer` database:**
+**7. Add indices to `wikiGazetteer` database:**
 ```
 mysql> use wikiGazetteer
 mysql> ALTER TABLE location ADD INDEX(id); 
@@ -150,7 +144,7 @@ The resulting DB `gazetteer` will have the following tables (and, in parentheses
     
 ## WikiGazetteer: Examples of queries
 
-Return all locations that may be known as "Barcelona":
+#### Return all locations that may be known as "Barcelona"
 ```
 mysql> SELECT wiki_title, lat, lon, type, country, region FROM location
 JOIN altname ON altname.main_id=location.id
@@ -171,7 +165,7 @@ WHERE altname="Barcelona";
 | Barcelona,_Arkansas                              |  35.6206 | -94.4561 | city   | US      | AR     |
 | Barcelona_(Parliament_of_Catalonia_constituency) |    41.45 |  2.08333 | NULL   | NULL    | NULL   |
 
-Return all possible names for Quebec City: 
+#### Return all possible names for Quebec City: 
 ```
 mysql> SELECT altname, source, wiki_title FROM altname
 JOIN location ON location.id=altname.main_id
