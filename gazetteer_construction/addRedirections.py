@@ -6,6 +6,7 @@ from mysql.connector import Error
 import urllib.parse
 import re
 import json
+from timeit import default_timer as timer
 
 """
 Clean wiki title from appositions and unlikely characters:
@@ -13,7 +14,7 @@ Clean wiki title from appositions and unlikely characters:
 def preprocessLocName(locname):
     if locname != None:
         if not any(char.isdigit() for char in locname):
-            match = re.match(r'^[\p{Latin}[A-Za-z\s\-\'\’]+$', locname)
+            match = re.match(r'^[\u00C0-\u017FA-Za-z\s\-\'\’]+$', locname)
             if match:
                 locname = match.group()
                 locname = locname.split(",_")[0]
@@ -64,15 +65,15 @@ alreadyAddedAltnames = dict()
 try:
     wikiDB = mysql.connector.connect(
             host='localhost',
-            database='wiki_en',
-            user='root',
-            password='1234'
+            database='wiki_db',
+            user='xxxxxxxx',
+            password='xxxxxxxx'
         )
     gazDB = mysql.connector.connect(
             host='localhost',
-            database='gazetteer',
-            user='root',
-            password='1234')
+            database='wikiGazetteer',
+            user='xxxxxxxx',
+            password='xxxxxxxx')
     if wikiDB.is_connected() and gazDB.is_connected():
         cursor = wikiDB.cursor(dictionary=True)
         cursorGaz = gazDB.cursor(dictionary=True)
@@ -142,8 +143,6 @@ try:
                 dictRedirects[redirectPageTitle] = altMainId
 
         gazDB.commit()
-        with open('dictionaryOfRedirects.json', 'w') as f:
-            json.dump(dictRedirects, f, ensure_ascii=False)
 
 except Error as e:
     print("Error while connecting to MySQL", e)

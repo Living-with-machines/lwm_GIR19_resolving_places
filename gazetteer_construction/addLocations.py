@@ -4,7 +4,7 @@
 import mysql.connector
 from mysql.connector import Error
 import urllib.parse
-import regex as re
+import re
 import os
 import sys
 from timeit import default_timer as timer
@@ -12,8 +12,8 @@ from timeit import default_timer as timer
 # Geonames language pseudocodes (https://www.geonames.org/manual.html):
 geoPseudocodes = ["post", "link", "iata", "icao", "faac", "tcid", "unlc", "abbr", "wkdt", "phon", "piny"]
 
-DATA_DIR = sys.argv[1] if len(sys.argv) > 1 else '.'
-LIMIT = sys.argv[2] if len(sys.argv) > 2 and int(sys.argv[2]) > 0 else None
+LANGUAGE = sys.argv[1] if len(sys.argv) > 1 else 'en'
+DATA_DIR = sys.argv[2] if len(sys.argv) > 2 else '.'
 
 start_time = timer()
 
@@ -28,12 +28,12 @@ Collect information from alternateNamesV2 table from geonames DB:
 
 print('Loading alternate names')
 
-re_enwiki = r'.*en\.wikipedia\.org/wiki/.+'
+re_enwiki = r'.*' + LANGUAGE + r'\.wikipedia\.org/wiki/.+'
 dWikititleGeo = dict()
 dGeoWikititle = dict()
 dWikititleAltname = dict()
 dGeoMaininfo = dict()
-with open(os.path.join(os.path.join(DATA_DIR, "alternateNamesV2"), "alternateNamesV2.txt")) as fr:
+with open(os.path.join(DATA_DIR, "alternateNamesV2.txt")) as fr:
     lines = fr.readlines()
     for line in lines:
         line = line.strip().split("\t")
@@ -51,7 +51,7 @@ with open(os.path.join(os.path.join(DATA_DIR, "alternateNamesV2"), "alternateNam
         isolanguage = line[2]
         alternatename = line[3]
         if geonameid in dGeoWikititle and not isolanguage in geoPseudocodes:
-            match = re.match(r'^[\p{Latin}[A-Za-z\s\-\'\’]+$', alternatename)
+            match = re.match(r'^[\u00C0-\u017FA-Za-z\s\-\'\’]+$', alternatename)
             if match:
                 altname = match.group()
                 shortWikiTitle = dGeoWikititle[geonameid]
@@ -73,7 +73,7 @@ see 'geoname' table for columns):
         * ascii version of the name
         * population of the location
 """
-with open(os.path.join(DATA_DIR,"cities500.txt")) as fr:
+with open(os.path.join(DATA_DIR, "cities500.txt")) as fr:
     lines = fr.readlines()
     for line in lines:
         line = line.strip().split("\t")
@@ -177,15 +177,15 @@ gazDB = None
 try:
     wikiDB = mysql.connector.connect(
             host='localhost',
-            database='wiki_en',
-            user='root',
-            password='1234'
+            database='wiki_db',
+            user='xxxtexxxxx',
+            password='xxxxxxxx'
         )
     gazDB = mysql.connector.connect(
             host='localhost',
-            database='gazetteer',
-            user='root',
-            password='1234')
+            database='wikiGazetteer',
+            user='xxxxxxxx',
+            password='xxxxxxxx')
     if wikiDB.is_connected() and gazDB.is_connected():
         cursor = wikiDB.cursor(dictionary=True)
         cursorGaz = gazDB.cursor(dictionary=True)
@@ -197,8 +197,6 @@ try:
 
         ### Main pages that are not redirected and are locations:
         query = 'SELECT * FROM locs'
-        if LIMIT:
-            query += ' LIMIT {};'.format(LIMIT)
         print('Executing locations query: {}'.format(query))
         cursor.execute(query)
         results = cursor.fetchall()
