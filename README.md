@@ -5,15 +5,15 @@ Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra
 
 ## High-resolution figures
 
-Download high-resolution figures of our GIR19 paper:
+Download figures of our GIR19 paper in high-resolution:
 
-[Figure 1](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791076/fig01.pdf)
+[Figure 1](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791076/fig01.pdf) (2.6 MB)
 
-[Figure 2](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791083/fig02.pdf)
+[Figure 2](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791083/fig02.pdf) (12.1 MB)
 
-[Figure 3](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791087/fig03.pdf)
+[Figure 3](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791087/fig03.pdf) (7 MB)
 
-[Figure 4](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791090/fig04.pdf)
+[Figure 4](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791090/fig04.pdf) (2.6 MB)
 
 ## installation
 
