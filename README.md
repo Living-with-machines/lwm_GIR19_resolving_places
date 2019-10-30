@@ -20,7 +20,10 @@ Download figures of our GIR19 paper in high-resolution:
 1. [Install Anaconda following these instructions](https://docs.anaconda.com/anaconda/install/)
 
 2. 
-
 ```bash
 > conda env create -f environment.yml
+```
+3. 
+```bash
+> conda activate gir19
 ```
