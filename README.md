@@ -1,0 +1,1 @@
+# lwm_GIR19_resolving_places
