@@ -19,6 +19,8 @@ mysql> exit;
 ```
 
 **2. Download relevant Wikipedia tables and upload them to the `wiki_db` database:**
+
+This step may take a long time (a couple of hours).
 ```
 $ wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-redirect.sql.gz
 $ wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-page.sql.gz
