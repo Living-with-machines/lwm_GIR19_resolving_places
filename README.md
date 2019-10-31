@@ -15,18 +15,18 @@ Download figures of our GIR19 paper in high-resolution:
 
 [Figure 4](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791090/fig04.pdf) (2.6 MB)
 
-## installation
+## Installation
 
 1. [Install Anaconda following these instructions](https://docs.anaconda.com/anaconda/install/)
 
-2.
+2. Create `gir19` environment:
 
 ```bash
 conda env create -f environment.yml
 ```
 
-3. 
+3. Activate `gir19` environment:
 
 ```bash
-conda activate gir19
+source activate gir19
 ```
