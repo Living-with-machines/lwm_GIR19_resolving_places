@@ -101,8 +101,8 @@ $ python addRedirections.py
 ```
 
 _Notes:_
-* You will need to change your mysql connection credentials accordingly, both in `addLocations.py` (lines 182-183 and 188-189) and `addRedirections.py` (lines 69-70 and 75-76).
-* These scripts have been created for English. For any other language using the Latin alphabet, just adding the correct language code as first argument of `addLocations.py` should be enough. For languages not using the Latin alphabet, you might also want to change the regular expressions in `addLocations.py` (line 55) and `addRedirections.py` (line 17).
+* You will need to change your mysql connection credentials accordingly, both in `addLocations.py` (lines 181-182 and 187-188) and `addRedirections.py` (lines 69-70 and 75-76).
+* These scripts have been created for English. For any other language using the Latin alphabet, add the correct language code as first argument of `addLocations.py`, and edit lines 106 and 206, as they contain language-specific filters. For languages not using the Latin alphabet, you might also want to change the regular expressions in `addLocations.py` (line 54) and `addRedirections.py` (line 17).
 
 **7. Add indices to `wikiGazetteer` database:**
 ```
