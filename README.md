@@ -17,7 +17,7 @@ Download figures of our GIR19 paper in high-resolution:
 
 ## Installation
 
-1. [Install Anaconda following these instructions](https://docs.anaconda.com/anaconda/install/)
+1. Install Anaconda following [these instructions](https://docs.anaconda.com/anaconda/install/).
 
 2. Create `gir19` environment:
 
@@ -30,3 +30,5 @@ conda env create -f environment.yml
 ```bash
 source activate gir19
 ```
+
+4. To create your own version of wikiGazetteer, make sure you have MySQL installed and follow [these instructions](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/tree/master/gazetteer_construction).
