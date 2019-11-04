@@ -55,4 +55,4 @@ source activate gir19
 
 
 ## Future work and contributing 
-The authors of the paper plan to continue development of the code and extension of the Gazetteer. We welcome pull requests for improvements. 
+The authors of the paper plan to continue development of the code and extension of the Gazetteer. We welcome pull requests for improvements and issues for any errors you encounter.
