@@ -2,7 +2,6 @@
 
 This repository provides underlying code for the paper '*Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources*'.  
 
-
 ## Citation
 If you use or adapt this code in your paper, please use this citation; 
 
@@ -56,4 +55,4 @@ source activate gir19
 
 
 ## Future work and contributing 
-- The authors of the paper plan to continue development of the code and extension of the Gazetteer. We welcome pull requests for improvements. 
+The authors of the paper plan to continue development of the code and extension of the Gazetteer. We welcome pull requests for improvements. 
