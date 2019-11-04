@@ -45,7 +45,7 @@ source activate gir19
 ## Install MySQL 
 
 - The steps for installing MySQL will vary by platform. A good starting place will by the MySQL [documentation](https://dev.mysql.com/doc/)
-- The GIR code makes use of [mysql-connector-python](https://pypi.org/project/mysql-connector-python/) to connect to the MySQL server and will have been installed in the environment you created above. 
+- The GIR code makes use of [mysql-connector-python](https://pypi.org/project/mysql-connector-python/) to connect to the MySQL server. This will have been installed in the environment you created above. 
 
 ### MySQL Authentication 
 - The code in this repo has a default [username and password](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/blob/master/gazetteer_construction/addLocations.py#L178
