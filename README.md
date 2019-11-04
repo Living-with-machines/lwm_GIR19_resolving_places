@@ -52,7 +52,7 @@ source activate gir19
 ) for connecting to MySQL you will need to change this if you setup your MySQL server with a different password 
 
 ### Creating your own wikiGazetteer
-[Full instructions](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/tree/master/gazetteer_construction) outline the steps to create a wikiGazetteer.
+[Full instructions](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/tree/master/gazetteer_construction) outline the steps to create a wikiGazetteer yourself. 
 
 
 ## Future work and contributing 
