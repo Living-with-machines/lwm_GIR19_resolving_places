@@ -43,16 +43,13 @@ source activate gir19
 
 ## Install MySQL 
 
+### Creating your own wikiGazetteer
+[Full instructions](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/tree/master/gazetteer_construction) outline the steps to create a wikiGazetteer yourself. You will need MySQL installed:
 - The steps for installing MySQL will vary by platform. A good starting place will by the MySQL [documentation](https://dev.mysql.com/doc/)
-- The GIR code makes use of [mysql-connector-python](https://pypi.org/project/mysql-connector-python/) to connect to the MySQL server. This will have been installed in the environment you created above. 
+- The GIR code makes use of [mysql-connector-python](https://pypi.org/project/mysql-connector-python/) to connect to the MySQL server. This should have been installed in the environment you created above. 
 
 ### MySQL Authentication 
-- The code in this repo has a default [username and password](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/blob/master/gazetteer_construction/addLocations.py#L178
-) for connecting to MySQL you will need to change this if you setup your MySQL server with a different password 
-
-### Creating your own wikiGazetteer
-[Full instructions](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/tree/master/gazetteer_construction) outline the steps to create a wikiGazetteer yourself. 
-
+- The code in this repo has a default username and password (see [here](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/blob/master/gazetteer_construction/addLocations.py#L178) and [here](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/blob/master/gazetteer_construction/addRedirections.py#L66)) for connecting to MySQL you will need to change this if you setup your MySQL server with a different password 
 
 ## Future work and contributing 
 The authors of the paper plan to continue development of the code and extension of the Gazetteer. We welcome pull requests for improvements and issues for any errors you encounter.
