@@ -178,14 +178,14 @@ try:
     wikiDB = mysql.connector.connect(
             host='localhost',
             database='wiki_db',
-            user='xxxtexxxxx',
-            password='xxxxxxxx'
+            user='testGazetteer',
+            password='1234'
         )
     gazDB = mysql.connector.connect(
             host='localhost',
             database='wikiGazetteer',
-            user='xxxxxxxx',
-            password='xxxxxxxx')
+            user='testGazetteer',
+            password='1234')
     if wikiDB.is_connected() and gazDB.is_connected():
         cursor = wikiDB.cursor(dictionary=True)
         cursorGaz = gazDB.cursor(dictionary=True)
@@ -203,32 +203,35 @@ try:
         print('Completed locations query: {}'.format(timer()-start_time))
         total_rows = 0
 
+        filter_out = ['_meridian_', '_parallel_']
+
         for result in results:
-            gtName = result['gt_name']
-            mainPageId = result['page_id']
-            mainPageTitle = result['page_title']
-            mainPageLen = result['page_len']
-            gtId = result['gt_id']
-            gtLat = result['gt_lat']
-            gtLon = result['gt_lon']
-            gtDim = result['gt_dim']
-            gtType = result['gt_type']
-            gtCountry = result['gt_country']
-            gtRegion = result['gt_region']
+        	if not any(substring in result['page_title'] for substring in filter_out):
+	            gtName = result['gt_name']
+	            mainPageId = result['page_id']
+	            mainPageTitle = result['page_title']
+	            mainPageLen = result['page_len']
+	            gtId = result['gt_id']
+	            gtLat = result['gt_lat']
+	            gtLon = result['gt_lon']
+	            gtDim = result['gt_dim']
+	            gtType = result['gt_type']
+	            gtCountry = result['gt_country']
+	            gtRegion = result['gt_region']
 
-            ### Insert alternate names from wiki title:
-            indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames = insertIntoDB(mainPageTitle, cursorGaz, indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames, dWikititleGeo, dGeoMaininfo, dWikititleAltname, mainPageId, mainPageTitle, gtId, mainPageLen, gtLat, gtLon, gtDim, gtType, gtCountry, gtRegion, "wikimain")
+	            ### Insert alternate names from wiki title:
+	            indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames = insertIntoDB(mainPageTitle, cursorGaz, indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames, dWikititleGeo, dGeoMaininfo, dWikititleAltname, mainPageId, mainPageTitle, gtId, mainPageLen, gtLat, gtLon, gtDim, gtType, gtCountry, gtRegion, "wikimain")
 
-            ### Insert alternate names from wiki title:
-            indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames = insertIntoDB(gtName, cursorGaz, indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames, dWikititleGeo, dGeoMaininfo, dWikititleAltname, mainPageId, mainPageTitle, gtId, mainPageLen, gtLat, gtLon, gtDim, gtType, gtCountry, gtRegion, "wikigt")
+	            ### Insert alternate names from wiki title:
+	            indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames = insertIntoDB(gtName, cursorGaz, indexMainLocations, uniqueMainLocs, indexAlternateNames, uniqueAltnames, dWikititleGeo, dGeoMaininfo, dWikititleAltname, mainPageId, mainPageTitle, gtId, mainPageLen, gtLat, gtLon, gtDim, gtType, gtCountry, gtRegion, "wikigt")
 
-            movingLimit += 1
-            total_rows += 1
+	            movingLimit += 1
+	            total_rows += 1
 
-            if movingLimit >= commitAt:
-                print("Row {}: {}".format(total_rows, timer()-start_time))
-                gazDB.commit()
-                movingLimit = 0
+	            if movingLimit >= commitAt:
+	                print("Row {}: {}".format(total_rows, timer()-start_time))
+	                gazDB.commit()
+	                movingLimit = 0
         gazDB.commit()
 
         print('Total rows in query: {}'.format(total_rows))

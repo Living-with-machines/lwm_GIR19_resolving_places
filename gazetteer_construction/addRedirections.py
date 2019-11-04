@@ -66,14 +66,14 @@ try:
     wikiDB = mysql.connector.connect(
             host='localhost',
             database='wiki_db',
-            user='xxxxxxxx',
-            password='xxxxxxxx'
+            user='testGazetteer',
+            password='1234'
         )
     gazDB = mysql.connector.connect(
             host='localhost',
             database='wikiGazetteer',
-            user='xxxxxxxx',
-            password='xxxxxxxx')
+            user='testGazetteer',
+            password='1234')
     if wikiDB.is_connected() and gazDB.is_connected():
         cursor = wikiDB.cursor(dictionary=True)
         cursorGaz = gazDB.cursor(dictionary=True)
