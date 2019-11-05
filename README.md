@@ -7,6 +7,13 @@ If you use or adapt this code in your paper, please use this citation;
 
 Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra Hosseini, Daniel van Strien (2019), **Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources**. In _Proceedings of the 13th Workshop on Geographic Information Retrieval_ (GIR'19), 2019.
 
+## What is this?
+
+**Resolving Places** is one of the first outputs of Living with Machines, a collaborative digital history project at The Alan Turing Institute and the British Library. This research is part of our work to build a nineteenth-century gazetteer that combines place names derived from historical sources ([GB1900](http://www.beta.visionofbritain.org.uk/gbhdb/section/gb1900)) with online resources (Wikipedia and Geonames). GB1900 is the result of a crowdsourced project that transcribed all text labels on the 2nd edition 6-inch to 1 mile Ordnance Survey maps of Great Britain (ca. 1900) held by the National Library of Scotland ([NLS Maps online](https://maps.nls.uk/os/6inch-england-and-wales/)). 
+
+The Living with Machines gazetteer follows best practices in combining multiple existing resources, and is novel in accounting for places that have different scales (e.g. streets, buildings, cities, counties). In the future, we will be adding records and enriching current records with information from OS map 1st edition map label data and other sources.
+
+
 ## High-resolution figures
 
 Download figures of our GIR19 paper in high-resolution:
@@ -50,10 +57,19 @@ source activate gir19
 #### MySQL Authentication 
 - The code in this repo has a default username and password (see [here](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/blob/master/gazetteer_construction/addLocations.py#L178) and [here](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/blob/master/gazetteer_construction/addRedirections.py#L66)) for connecting to MySQL you will need to change this if you setup your MySQL server with a different password .
 
-### Future work and contributing 
+## Future work and contributing 
 The authors of the paper plan to continue development of the code and extension of the Gazetteer. We welcome pull requests for improvements and issues for any errors you encounter.
 
-### License
+## Get in touch
+You can reach us by email:
+- Mariona Coll Ardanuy, mcollardanuy[at]turing.ac.uk
+- Katherine McDonough, kmcdonough[at]turing.ac.uk
+- Amrey Krause, akrause[at]turing.ac.uk
+- Daniel CS Wilson, dwilson[at]turing.ac.uk
+- Kasra Hosseini, khossienizad[at]turing.ac.uk
+- Daniel van Strien, Daniel.Van-Strien[at]bl.uk
+
+## License
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
