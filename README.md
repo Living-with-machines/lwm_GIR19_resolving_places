@@ -35,16 +35,16 @@ To setup your own version of wikiGazetteer and reproducing the analysis in the p
 
 1. Install Anaconda following [these instructions](https://docs.anaconda.com/anaconda/install/).
 
-2. Create `gir19` environment:
+2. Create `gir19lwm` environment:
 
 ```bash
 conda env create -f environment.yml
 ```
 
-3. Activate `gir19` environment:
+3. Activate `gir19lwm` environment:
 
 ```bash
-source activate gir19
+source activate gir19lwm
 ```
 
 ### Install MySQL 
