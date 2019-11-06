@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/218500126.svg)](https://zenodo.org/badge/latestdoi/218500126)
+
 # GIR19 paper
 
 This repository provides underlying code for the paper '*Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources*'.  
