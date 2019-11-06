@@ -1,31 +1,13 @@
-name: gir19lwm
+name: gir19
 channels:
   - conda-forge
   - anaconda
   - defaults
 dependencies:
-  - ca-certificates=2019.10.16=0
-  - certifi=2019.9.11=py37_0
-  - libprotobuf=3.6.0=hd9629dc_0
-  - mysql-connector-c=6.1.11
-  - mysql-connector-python=8.0.18
-  - openssl=1.1.1=h1de35cc_0
-  - protobuf=3.6.0=py37h0a44026_0
-  - cartopy=0.17.0=py37h95120c7_1007
-  - geos=3.7.2=h6de7cb9_2
-  - matplotlib-base=3.1.1=py37h3a684a6_1
-  - owslib=0.18.0=py_0
-  - proj4=6.1.1=hca663eb_1
-  - pyepsg=0.4.0=py_0
-  - pykdtree=1.3.1=py37h917ab60_1002
-  - pyproj=2.3.1=py37h9bb365a_0
-  - pyshp=2.1.0=py_0
-  - pytest=5.0.1=py37_0
-  - shapely=1.6.4=py37h0567c5e_1006
   - _anaconda_depends=2019.03=py37_0
   - alabaster=0.7.12=py37_0
-  - anaconda-client=1.7.2=py37_0
   - anaconda=custom=py37_1
+  - anaconda-client=1.7.2=py37_0
   - anaconda-project=0.8.3=py_0
   - appnope=0.1.0=py37_0
   - appscript=1.1.0=py37h1de35cc_0
@@ -49,6 +31,9 @@ dependencies:
   - boto=2.49.0=py37_0
   - bottleneck=1.2.1=py37h1d22016_1
   - bzip2=1.0.8=h1de35cc_0
+  - ca-certificates=2019.10.16=0
+  - cartopy=0.17.0=py37h95120c7_1007
+  - certifi=2019.9.11=py37_0
   - cffi=1.12.3=py37hb5b8e2f_0
   - chardet=3.0.4=py37_1003
   - click=7.0=py37_0
@@ -76,6 +61,7 @@ dependencies:
   - flask=1.1.1=py_0
   - freetype=2.9.1=hb4e5f40_0
   - fsspec=0.5.2=py_0
+  - geos=3.7.2=h6de7cb9_2
   - get_terminal_size=1.0.0=h7520d66_0
   - gettext=0.19.8.1=h15daf44_3
   - gevent=1.4.0=py37h1de35cc_0
@@ -94,7 +80,7 @@ dependencies:
   - imagesize=1.1.0=py37_0
   - importlib_metadata=0.23=py37_0
   - intel-openmp=2019.4=233
-  - ipykernel=5.1.2=py37h39e3cac_0
+  - ipykernel=5.1.3=py37h39e3cac_0
   - ipython=7.8.0=py37h39e3cac_0
   - ipython_genutils=0.2.0=py37_0
   - ipywidgets=7.5.1=py_0
@@ -128,6 +114,7 @@ dependencies:
   - libiconv=1.15=hdd342a3_7
   - liblief=0.9.0=h2a1bed3_2
   - libpng=1.6.37=ha441bb4_0
+  - libprotobuf=3.6.0=hd9629dc_0
   - libsodium=1.0.16=h3efe00b_0
   - libssh2=1.8.2=ha12b0ac_0
   - libtiff=4.0.10=hcb84e12_2
@@ -141,6 +128,7 @@ dependencies:
   - lzo=2.10=h362108e_2
   - markupsafe=1.1.1=py37h1de35cc_0
   - matplotlib=3.1.1=py37h54f8f79_0
+  - matplotlib-base=3.1.1=py37h3a684a6_1
   - mccabe=0.6.1=py37_1
   - mistune=0.8.4=py37h1de35cc_0
   - mkl=2019.4=233
@@ -154,6 +142,8 @@ dependencies:
   - mpmath=1.1.0=py37_0
   - msgpack-python=0.6.1=py37h04f5b5a_1
   - multipledispatch=0.6.0=py37_0
+  - mysql-connector-c=6.1.11=hccea1a4_0
+  - nb_conda_kernels=2.2.2=py37_0
   - nbconvert=5.6.0=py37_1
   - nbformat=4.4.0=py37_0
   - ncurses=6.1=h0a44026_1
@@ -168,6 +158,8 @@ dependencies:
   - numpydoc=0.9.1=py_0
   - olefile=0.46=py37_0
   - openpyxl=3.0.0=py_0
+  - openssl=1.1.1=h1de35cc_0
+  - owslib=0.18.0=py_0
   - packaging=19.2=py_0
   - pandas=0.25.1=py37h0a44026_0
   - pandoc=2.2.3.2=0
@@ -186,8 +178,10 @@ dependencies:
   - pkginfo=1.5.0.1=py37_0
   - pluggy=0.13.0=py37_0
   - ply=3.11=py37_0
+  - proj4=6.1.1=hca663eb_1
   - prometheus_client=0.7.1=py_0
   - prompt_toolkit=2.0.10=py_0
+  - protobuf=3.6.0=py37h0a44026_0
   - psutil=5.6.3=py37h1de35cc_0
   - ptyprocess=0.6.0=py37_0
   - py=1.8.0=py37_0
@@ -197,16 +191,21 @@ dependencies:
   - pycparser=2.19=py37_0
   - pycrypto=2.6.1=py37h1de35cc_9
   - pycurl=7.43.0.3=py37ha12b0ac_0
+  - pyepsg=0.4.0=py_0
   - pyflakes=2.1.1=py37_0
   - pygments=2.4.2=py_0
+  - pykdtree=1.3.1=py37h917ab60_1002
   - pylint=2.4.2=py37_0
   - pyodbc=4.0.27=py37h0a44026_0
   - pyopenssl=19.0.0=py37_0
   - pyparsing=2.4.2=py_0
+  - pyproj=2.3.1=py37h9bb365a_0
   - pyqt=5.9.2=py37h655552a_2
   - pyrsistent=0.15.4=py37h1de35cc_0
+  - pyshp=2.1.0=py_0
   - pysocks=1.7.1=py37_0
   - pytables=3.5.2=py37h5bccee9_1
+  - pytest=5.0.1=py37_0
   - pytest-arraydiff=0.3=py37h39e3cac_0
   - pytest-astropy=0.5.0=py37_0
   - pytest-doctestplus=0.4.0=py_0
@@ -235,6 +234,7 @@ dependencies:
   - seaborn=0.9.0=py37_0
   - send2trash=1.5.0=py37_0
   - setuptools=41.4.0=py37_0
+  - shapely=1.6.4=py37h0567c5e_1006
   - simplegeneric=0.8.1=py37_2
   - singledispatch=3.4.0.3=py37_0
   - sip=4.19.8=py37h0a44026_0
@@ -255,7 +255,6 @@ dependencies:
   - sphinxcontrib-websupport=1.1.2=py_0
   - spyder=3.3.6=py37_0
   - spyder-kernels=0.5.2=py37_0
-  - sqlalchemy=1.3.9=py37h1de35cc_0
   - sqlite=3.30.0=ha441bb4_0
   - statsmodels=0.10.1=py37h1d22016_0
   - sympy=1.4=py37_0
@@ -290,7 +289,8 @@ dependencies:
   - zlib=1.2.11=h1de35cc_3
   - zstd=1.3.7=h5bba6e5_0
   - pip:
-    - libarchive-c==2.8
-    - lief==0.9.0
-    - msgpack==0.6.1
-    - tables==3.5.2
+    - mysql-connector-python==8.0.18
+    - sqlitedict==1.6.0
+    - sqlparse==0.3.0
+prefix: /Users/mcollardanuy/anaconda3/envs/gir19
+
