@@ -18,7 +18,7 @@ The Living with Machines gazetteer follows best practices in combining multiple 
 
 Download figures of our GIR19 paper in high-resolution:
 
-[Figure 1](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791076/fig01.pdf) (2.6 MB)
+[Figure 1](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3815472/manual_dorset_newspapers.pdf) (3 MB)
 
 [Figure 2](https://github.com/alan-turing-institute/lwm_GIR19_resolving_places/files/3791083/fig02.pdf) (12.1 MB)
 
