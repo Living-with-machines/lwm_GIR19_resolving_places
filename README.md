@@ -69,6 +69,11 @@ You can reach us by email:
 - Kasra Hosseini, khossienizad[at]turing.ac.uk
 - Daniel van Strien, Daniel.Van-Strien[at]bl.uk
 
+
+## Acknowledgements 
+
+This work is part of the [Living with Machines project](http://livingwithmachines.ac.uk). Living with Machines is a multidisciplinary programme funded by the Strategic Priority Fund which is led by UK Research and Innovation (UKRI) and delivered by the Arts and Humanities Research Council (AHRC). Newspaper data was kindly shared by [Findmypast](https://www.findmypast.co.uk/). We thank Chris Fleet and the [National Library of Scotland](https://www.nls.uk) for sharing digital map images and metadata for OS collections as well as context about GB1900. Thank you also to Humphrey Southall, Paula Aucott, and Richard Light for discussing the future of GB1900.
+
 ## License
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
