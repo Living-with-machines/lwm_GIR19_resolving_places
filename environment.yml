@@ -1,4 +1,4 @@
-name: gir19
+name: gir19lwm
 channels:
   - conda-forge
   - anaconda
@@ -7,8 +7,8 @@ dependencies:
   - ca-certificates=2019.10.16=0
   - certifi=2019.9.11=py37_0
   - libprotobuf=3.6.0=hd9629dc_0
-  - mysql-connector-c=6.1.11=hccea1a4_0
-  - mysql-connector-python=8.0.17=py37h3febbb0_0
+  - mysql-connector-c=6.1.11
+  - mysql-connector-python=8.0.18
   - openssl=1.1.1=h1de35cc_0
   - protobuf=3.6.0=py37h0a44026_0
   - cartopy=0.17.0=py37h95120c7_1007
