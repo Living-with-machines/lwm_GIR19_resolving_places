@@ -171,7 +171,7 @@ WHERE altname="Barcelona";
 ```
 mysql> SELECT altname, source, wiki_title FROM altname
 JOIN location ON location.id=altname.main_id
-WHERE wiki_title="Quebec_City"
+WHERE wiki_title="Quebec_City";
 ```
 | altname          | source        | wiki_title  |
 |------------------|---------------|-------------|
