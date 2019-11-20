@@ -7,7 +7,7 @@ This repository provides underlying code for the paper '*Resolving Places, Past 
 ## Citation
 If you use or adapt this code in your paper, please use this citation; 
 
-Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra Hosseini, Daniel van Strien (2019), **Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources**. In _Proceedings of the 13th Workshop on Geographic Information Retrieval_ (GIR'19), 2019.
+Mariona Coll Ardanuy, Katherine McDonough, Amrey Krause, Daniel CS Wilson, Kasra Hosseini, Daniel van Strien, **Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources**. In _Proceedings of the 13th Workshop on Geographic Information Retrieval_ (GIR'19), Forthcoming.
 
 ## What is this?
 
