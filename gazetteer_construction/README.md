@@ -21,6 +21,9 @@ mysql> exit;
 **2. Download relevant Wikipedia tables and upload them to the `wiki_db` database:**
 
 This step may take a long time (a couple of hours).
+
+_Note:_ the Wikipedia version discussed in the GIR19 paper is `20190320`: to reproduce the same analysis, just replace `latest` by `20190320` in the URLs. If you want to create a gazetteer in any other language, change the Wikipedia language code in the URLs (e.g. `enwiki` to `cawiki`, check for [reference](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)).
+
 ```
 $ wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-redirect.sql.gz
 $ wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-page.sql.gz
@@ -38,8 +41,6 @@ $ rm enwiki-latest-geo_tags.sql
 $ rm enwiki-latest-redirect.sql 
 $ rm enwiki-latest-page.sql 
 ```
-
-_Note:_ the Wikipedia version discussed in the GIR19 paper is `20190320`: to reproduce the same analysis, just replace `latest` by `20190320` in the URLs. If you want to create a gazetteer in any other language, change the Wikipedia language code in the URLs (e.g. `enwiki` to `cawiki`, check for [reference](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)).
 
 **3. Create view that selects geographical entities:**
 ```
